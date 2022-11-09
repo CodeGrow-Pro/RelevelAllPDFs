@@ -1,0 +1,94 @@
+Question 1
+App building
+
+Build a simple URL shortener. You might have used a URL shortener before, such as bit.ly, goo.gl. They are useful for shortening long URLs so that you can easily share them with your friends, family or co-workers.
+
+ 
+
+How does URL shortener work?
+
+When the user inputs the url, suppose www.relevel.com, the shortener system passes the long url through the hash function, which returns a short id, which is then used to map it to the entered url.
+
+For eg.   
+
+ 
+
+User enters www.relevel.com -> hash function returns -> Uy8fu
+
+So when the request is made for ourdomain.com/Uy8fu it is redirected to www.relevel.com
+
+ 
+
+www.relevel.com shortened version would be localhost:3000/Uy8fu. When you hit this url it should redirect you to www.relevel.com
+
+ 
+
+For redirection. You can use res.redirect(url) if you are using express lib
+
+ 
+
+Hash function basically takes a variable size input and maps it to fixed sized values which we call hashcode.
+
+ 
+
+Step1: User enters a url
+
+Step2: Pass the url through the hash function to generate hash code
+
+Step3: Store the url and shortened url in db and return the shortened url
+
+ 
+
+Hash function is provided below which you can use to build the url shortener:
+
+ 
+
+function getHash() {   
+
+var text = '';    
+
+var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    for (var i = 0; i < 5; i++)        
+
+text += possible.charAt(Math.floor(Math.random() * possible.length));    
+
+return text;
+
+}
+
+ 
+
+Apis should be as follows
+
+GET /?url=www.relevel.com -> returns the shortened url
+
+GET /allUrls -> returns the list of all urls along with the shortened version
+
+ 
+
+Boilerplate code is available :- https://github.com/VJ28/boilerplate_code
+
+Question 2
+App Enhancement
+
+Add login into your system, and the user should be able to see their shortened url.
+ If user1 shortens a few urls, they should be able to view the list of urls and their shortened version.
+
+ 
+
+You will need to add userId along with url and shortened url in db
+
+ 
+
+GET /shortUrls -> returns the list of all urls along with the shortened version for that user
+
+POST /signup
+
+POST /login
+
+
+
+reg---------->072670202002020
+ 
+

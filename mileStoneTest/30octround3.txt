@@ -1,0 +1,9 @@
+Design Twitter Design a simplified version of Twitter. Users can login, post tweets, follow/unfollow other users POST /login -> signup is not required(optional), on login you can create user if not exist POST /tweet -> post a tweet POST /follow -> pass follow/unfollow status along with userId and other userId to which user wants to follow/unfollow Enhancement User A should be able to fetch the list of users followed by A i.e. A is following Users should be able to see the news feed. Feeds should be ordered by date posted. GET /newsfeed Optimization Users should be able to see the only 10 most recent tweets in their news feed. Also think why are we restricting it to 10. You will have to implement pagination for the news feed ( in real system there is infinite scrolling on the UI when user scrolls we call api which is paginated and we keep loading feeds until the li
+st is exhausted) Boilerplate code is available :- https://github.com/VJ28/boilerplate_code
+
+
+App building
+Design Twitter Design a simplified version of Twitter. Users can login, post tweets, follow/unfollow other users POST /login -> signup is not required(optional), on login you can create user if not exist POST /tweet -> post a tweet POST /follow -> pass follow/unfollow status along with userId and other userId to which user wants to follow/unfollow Boilerplate code is available :- https://github.com/VJ28/boilerplate_code
+
+App Enhancement
+Enhancement User A should be able to fetch the list of users followed by A i.e. A is following Users should be able to see the news feed. Feeds should be ordered by date posted. GET /newsfeed Boilerplate code is available :- https://github.com/VJ28/boilerplate_code
