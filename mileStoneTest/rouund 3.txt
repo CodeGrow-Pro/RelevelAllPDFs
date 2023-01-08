@@ -87,8 +87,5 @@ POST /signup
 
 POST /login
 
-
-
-reg---------->072670202002020
  
 
